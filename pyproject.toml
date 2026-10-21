@@ -1,9 +1,16 @@
 [project]
 name = "pasaree-ai-models"
-version = "0.1.0"
+version = "0.2.0"
 description = "Stub kurasi lapak dan produk Pasaree"
 requires-python = ">=3.12"
 dependencies = []
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
